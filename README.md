@@ -20,6 +20,7 @@ func Example_Schedule() {
     s := scheduler.
         Do(func(t time.Time) error {
             log.Print("Running scheduled task")
+            return nil
         }).
         Every(30 * time.Second).
         Schedule()
