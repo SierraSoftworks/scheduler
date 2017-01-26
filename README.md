@@ -23,12 +23,13 @@ func Example_Schedule() {
             return nil
         }).
         Every(30 * time.Second).
+        WithHandler(func (errs <-chan error) {
+            for err := range errs {
+                log.Printf("Failed: %s\n", err.Error())
+            }
+        })
         Schedule()
 
     s.CancelWhen(time.After(2 * time.Minute))
-
-    for err := range s.Errors() {
-        log.Printf("Failed: %s\n", err.Error())
-    }
 }
 ```
