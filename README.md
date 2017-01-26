@@ -1,4 +1,4 @@
-# Scheduler
+# Scheduler [![Build Status](https://travis-ci.org/SierraSoftworks/scheduler.svg?branch=master)](https://travis-ci.org/SierraSoftworks/scheduler)
 **An idiomatic Go library providing extensible task scheduling capabilities**
 
 Scheduler provides a framework on which you can quickly and easily schedule
